@@ -1,6 +1,6 @@
-# Parking lot
+# Smart Planner
 
-**Número da Lista**: 1  
+**Número da Lista**: 36
 **Conteúdo da Disciplina**: FGA0124 - PROJETO DE ALGORITMOS - T01  
 
 
@@ -10,21 +10,24 @@
 <div align = "center">
 <table>
   <tr>
-    <td align="center"><a href="https://github.com/BiancaPatrocinio7"><img style="border-radius: 50%;" src="https://github.com/BiancaPatrocinio7.png" width="190;" alt=""/><br /><sub><b>Bianca Patrocínio</b></sub></a><br /><a href="Link git" title="Rocketseat"></a></td>
-    <td align="center"><a href="https://github.com/leticiatmartins"><img style="border-radius: 50%;" src="https://github.com/leticiatmartins.png" width="190px;" alt=""/><br /><sub><b>Leticia Torres </b></sub></a><br />
+    <td align="center"><a href="https://github.com/danielle-soaress"><img style="border-radius: 50%;" src="https://github.com/BiancaPatrocinio7.png" width="190;" alt=""/><br /><sub><b>Danielle Soares</b></sub></a><br /><a href="Link git" title="Rocketseat"></a></td>
+    <td align="center"><a href="https://github.com/Leticia-Arisa-K-Higa"><img style="border-radius: 50%;" src="https://github.com/leticiatmartins.png" width="190px;" alt=""/><br /><sub><b>Leticia Arisa</b></sub></a><br />
   </tr>
 </table>
 
 | Matrícula   | Aluno                             |
 | ----------- | ---------------------------------- |
-| 22/1008801  | Bianca Patrocínio Castro           |
-| 20/2016702  | Leticia Torres Soares Martins      |
+| 23/1012058  | Danielle Soares da Silva         |
+| 23/1012272  | Leticia Arisa Kobayashi Higa   |
 </div>
 
+
+<!--
 ## Sobre 
 O sistema de estacionamento simula a alocação de vagas de estacionamento para clientes em um shopping, com 18 vagas e 6 lojas, utilizando algoritmos de grafos. O objetivo é encontrar a vaga mais próxima de uma loja específica usando a busca em largura (BFS).
 
 ## Screenshots
+
 <p align="center">
   <img src="Documentos/screenshots/Print%201.png" alt="Print 1 do projeto" width="600"/>
 </p>
@@ -64,10 +67,9 @@ O sistema de estacionamento simula a alocação de vagas de estacionamento para 
 
 
 ## Instalação 
-**Linguagem**: C++
+**Linguagem**: Python
 
 ## Pré-requisitos
-
 Antes de rodar o projeto, você precisará ter os seguintes programas instalados:
 
 - **g++** (compilador C++).
@@ -138,4 +140,4 @@ caminho_para_vaga_X.png
   
 
 
-
+-->
