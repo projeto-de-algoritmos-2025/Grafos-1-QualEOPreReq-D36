@@ -1,72 +1,64 @@
----
-
-title: "🚗 Projeto de Algoritmos - Parking lot com Grafos"
-
----
+# 📚 Projeto de Algoritmos - Qual é o Pre Req?
 
 ## 👩‍💻 Integrantes
 
-- 202016702 Letícia Torres Soares Martins  
-- 221008801	Bianca Patrocínio Castro
+- Danielle Soares da Silva – 231012058
+- Leticia Arisa Kobayashi Higa – 231012272 
 
 ---
 
-
 ## 🎯 Objetivo
 
-Desenvolver um sistema de estacionamento que utiliza **algoritmos de grafos** para encontrar a **vaga disponível mais próxima** de uma **loja específica** escolhida pelo usuário. O sistema deve considerar tanto a **estrutura do estacionamento** (com conexões entre vagas) quanto a **ocupação atual das vagas**.
+Desenvolver um **sistema web** chamado **Qual é o Pre Req?** que auxilia estudantes a planejar sua jornada acadêmica, visualizando os pré-requisitos das disciplinas do curso de Engenharia de Software da Universidade de Brasília (UnB) Campus FCTE. O sistema utiliza algoritmos de grafos para encontrar relações entre as disciplinas do fluxo do curso e, assim, apresentar de forma clara todos os pré-requisitos de uma disciplina escolhida pelo usuário.
 
 ---
 
 ## 🔧 Tecnologias e Estruturas Utilizadas
 
-- **Linguagem**: C++
-- **Representação do grafo**: Lista de adjacência
-- **Tipo de grafo**: Direcionado
-- **Algoritmo de busca**: BFS (Breadth-First Search)
+- **Linguagens**: **JavaScript** (para a lógica), **HTML** (para a estrutura) e **CSS** (para o estilo).
+- **Representação do grafo**: Lista de adjacência — Implementada manualmente como um **objeto em JavaScript**, uma estrutura otimizada para a busca de vizinhos.
+- **Algoritmos de busca**:
+  - **DFS (Depth-First Search)**: Para percorrer o grafo e encontrar todos os pré-requisitos necessários a partir de uma disciplina, seguindo o caminho até o final.
+  - **BFS (Breadth-First Search)**: Para sugerir uma ordem de estudo por camadas, mostrando primeiro as disciplinas mais próximas do início do curso.
 
 ---
 
 ## 🧩 Modelagem do Grafo
 
 ### 🟢 Nós (Vértices)
-Cada **nó** do grafo representa uma **vaga** do estacionamento.
-
-#### Atributos de um nó:
-- `id`: número da vaga
-- `loja_proxima`: nome da loja mais próxima (ex: "Americanas")
-- `ocupada`: booleano indicando se a vaga está ocupada (`true`) ou livre (`false`)
+Cada nó do grafo representa uma disciplina do curso, com os seguintes atributos:
+- `nome`: Nome completo da disciplina (ex: "Cálculo II").
+- `codigo`: Identificador único da disciplina (ex: "MAT123").
 
 ### 🔗 Arestas
-As **arestas** representam os **caminhos** entre as vagas do estacionamento. Como nem todos os caminhos são necessariamente bidirecionais, o grafo será **direcionado**.
+As arestas direcionadas representam a relação de pré-requisito entre as disciplinas.
+Exemplo: Se há uma aresta de **Cálculo I → Cálculo II**, significa que **Cálculo I** é pré-requisito para **Cálculo II**.
 
-### 🧱 Estrutura de dados utilizada
-Usaremos uma **lista de adjacência** para representar o grafo.
+### 🧱 Estrutura de Dados
 
----
+O grafo será representado como um objeto de listas de adjacência em **JavaScript**.
 
-## 🏪 Lojas Disponíveis
+Exemplo:
+```javascript
+const graph = {
+    "Cálculo I": ["Cálculo II"],
+    "Cálculo II": ["Cálculo III"],
+    "Algoritmos": ["Estruturas de Dados"]
+};
+```
 
-As lojas próximas às vagas são:
+-----
 
-- Americanas
-- Magazine Luiza (Magalu)
-- C&A
-- Outros exemplos
+## 🧠 Funcionamento do Sistema
 
----
+1.  O usuário interage com a interface web, digita o nome de uma disciplina e clica em um botão.
 
-## 🧠 Funcionamento do Algoritmo
+2.  A aplicação executa a lógica em **JavaScript** para aplicar o algoritmo DFS (e/ou BFS).
 
-1. O usuário escolhe uma loja de destino.
-2. O algoritmo percorre o grafo com **BFS**, partindo das vagas mais próximas à loja.
-3. A busca ignora vagas ocupadas.
-4. O sistema retorna a **vaga disponível mais próxima** da loja escolhida.
+3.  O resultado do algoritmo é exibido na própria interface web, dentro de uma caixa de texto ou em um novo elemento HTML.
 
-## Apresentação 
+-----
 
-<div align="center">
-<a href="https://youtu.be/PoJ3FK-J3wM?si=VLjQ5nK-w6U8Dh7-"><img src="https://i.imgur.com/nNBEJk2.png" width="50%"></a>
-</div>
+## 🚀 Execução e Hospedagem
 
-<font size="3"><p style="text-align: center">Autor: [Bianca Patrocínio](https://github.com/BiancaPatrocinio7) e [Letícia Torres](https://github.com/leticiatmartins).</p></font>
+Para rodar o projeto localmente, basta abrir o arquivo `index.html` em qualquer navegador web.

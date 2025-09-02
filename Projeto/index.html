@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Qual é o Pre Req?</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>    
+    <link rel="stylesheet" href="css/style.css">
+    
+</head>
+<body>
+    <main class="relative min-h-screen flex flex-col justify-center bg-slate-900 overflow-hidden">
+        <div class="w-full max-w-6xl mx-auto px-4 md:px-6 py-24">
+    
+            <div class="text-center">
+                <div class="absolute top-0 left-0 rotate-180 -translate-x-3/4 -scale-x-100 blur-3xl opacity-70 pointer-events-none" aria-hidden="true">
+                    <img src="./shape.svg" class="max-w-none" width="852" height="582" alt="Illustration" />
+                </div>
+                <div class="absolute top-0 right-0 -translate-y-1/2 translate-x-1/4 blur-3xl opacity-70 pointer-events-none" aria-hidden="true">
+                    <img src="./shape.svg" class="max-w-none" width="852" height="582" alt="Illustration" />
+                </div>
+                <div class="absolute inset-0 pointer-events-none" aria-hidden="true">
+                    <canvas data-particle-animation></canvas>
+                </div>
+            
+                <div id="step_1_container">
+                    <h1>Qual é o Pre Req?</h1>
+                    <p>Descubra todos os pré-requisitos para uma disciplina do curso de Engenharia de Software da Universidade de Brasília (UnB).</p>
+                    <p class="init_search_text">Digite o código da disciplina e inicie a busca</p>
+                    <div class="input-container">
+                        <input type="text" id="subject-input" placeholder="FGA0060">
+                        <button id="search-button">Buscar Pré-requisitos</button>
+                    </div>
+                </div>            
+            </div>
+        </div>
+    </main>
+
+    <footer class="absolute left-6 right-6 md:left-12 md:right-auto bottom-4 md:bottom-8 text-center md:text-left">
+        <a class="text-xs text-slate-500 hover:underline" href="https://cruip.com">&copy;Cruip - Tailwind CSS templates</a>
+    </footer>
+
+    <script src="js/particle-animation.js"></script>
+    <script src="js/app.js" defer></script>
+</body>
+</html>
