@@ -1,0 +1,12 @@
+{
+  "Algoritmos e Programação de Computadores": [],
+  "Introdução a Engenharia": [],
+  "Desenho Industrial Assistido Por Computador": [],
+  "Engenharia e Ambiente": [],
+  "Cálculo 1": [],
+  "Probabilidade e Estatística Aplicado a Engenharia": ["Cáculo 1"],
+  "Fisica 1": [],
+  "Fisica 1 Experimental": [],
+  "Cáculo 2": ["Cáculo 1"],
+  "Introdução a Algebra Linear": []
+}
