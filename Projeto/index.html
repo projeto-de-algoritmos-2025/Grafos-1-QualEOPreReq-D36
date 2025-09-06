@@ -25,18 +25,20 @@
                 <div class="absolute inset-0 pointer-events-none" aria-hidden="true">
                     <canvas data-particle-animation></canvas>
                 </div>
-            
-                <div id="step_1_container">
-                    <h1>Qual é o Pre Req?</h1>
-                    <p>Descubra todos os pré-requisitos para uma disciplina do curso de Engenharia de Software da Universidade de Brasília (UnB).</p>
-                    <p class="init_search_text">Digite o código da disciplina e inicie a busca</p>
-                    <div class="input-container">
-                        <input type="text" id="subject-input" placeholder="FGA0060">
-                        <button id="search-button">Buscar Pré-requisitos</button>
-                    </div>
-                </div>            
             </div>
+            <div id="step_1_container">
+                <h1>Qual é o Pre Req?</h1>
+                <p>Descubra todos os pré-requisitos para uma disciplina do curso de Engenharia de Software da Universidade de Brasília (UnB).</p>
+                <p class="init_search_text">Digite o código da disciplina e inicie a busca</p>
+                <div class="input-container">
+                    <input type="text" id="disciplina-input" placeholder="FGA0060">
+                    <button id="search-button" onclick="mostrarPreReqs()">Buscar Pré-requisitos</button>
+                </div>
+                <div id="resultado"></div>     
+            </div>
+        
         </div>
+
     </main>
 
     <footer class="absolute left-6 right-6 md:left-12 md:right-auto bottom-4 md:bottom-8 text-center md:text-left">
@@ -45,5 +47,6 @@
 
     <script src="js/particle-animation.js"></script>
     <script src="js/app.js" defer></script>
+    <script src="js/script.js"></script>
 </body>
 </html>
