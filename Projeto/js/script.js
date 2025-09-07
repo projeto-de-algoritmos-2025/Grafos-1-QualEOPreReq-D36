@@ -177,20 +177,20 @@ function mostrarPreReqs() {
   resultadoDiv.innerHTML = '';
 
   if (disciplinaAlvo === '') {
-    resultadoDiv.innerHTML = '<p style="color: red;">Por favor, insira o código de uma disciplina.</p>';
+    resultadoDiv.innerHTML = '<p style="color: red;">Por favor, insira o nome de uma disciplina.</p>';
     return;
   }
 
   const chaveOriginal = disciplinasNormalizadas[disciplinaAlvo];
   if (!chaveOriginal) {
-    resultadoDiv.innerHTML = `<p style="color: red;">Disciplina '${disciplinaInput.value}' não encontrada.</p>`;
+    resultadoDiv.innerHTML = `<p style="color: red;">A disciplina '${disciplinaInput.value}' não foi encontrada.</p>`;
     return;
   }
 
   try {
-  const {prerequisites, error} = preReq_chain(grafoEngenhariaSoftware, chaveOriginal);
+    const { prerequisites, error } = preReq_chain(grafoEngenhariaSoftware, chaveOriginal);
 
-    if(error){
+    if (error) {
       resultadoDiv.innerHTML = `<p style="color: red;">${error}</p>`;
       return;
     }
@@ -198,13 +198,21 @@ function mostrarPreReqs() {
     if (prerequisites.length === 0) {
       resultadoDiv.innerHTML = `<p>A disciplina <strong>${chaveOriginal}</strong> não possui pré-requisitos.</p>`;
     } else {
-      resultadoDiv.innerHTML = `<p>Para cursar <strong>${chaveOriginal}</strong>, você precisa ter cursado:</p><ul>`;
-      prerequisites.forEach(preReq => {
-        resultadoDiv.innerHTML += `<li>${preReq}</li>`;
-      });
-      resultadoDiv.innerHTML += `</ul>`;
+      const listaCards = prerequisites.map(preReq => {
+        return `
+          <div class="prereq-card">
+            <h3>${preReq}</h3>
+          </div>
+        `;
+      }).join('');
+      
+      resultadoDiv.innerHTML = `
+        <p>Para cursar <strong>${chaveOriginal}</strong>, você precisa ter cursado:</p>
+        <div class="card-container">
+          ${listaCards}
+        </div>
+      `;
     }
-
   } catch (error) {
     if (error instanceof CycleError) {
       resultadoDiv.innerHTML = `<p style="color: red;">Erro: ${error.message}</p>`;

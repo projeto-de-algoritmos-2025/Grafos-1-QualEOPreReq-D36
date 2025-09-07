@@ -48,6 +48,48 @@ body main{
   background-color: #f0f0f0;
 }
 
+#resultado {
+    margin-top: 50px;
+    width: fit-content;
+    max-width: 60vw;
+    max-height: 50vh;
+    overflow-y: auto;
+    background-color: rgba(255, 255, 255, 0.162);
+    border-radius: 10px;
+    padding: 10px 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    color: rgb(255, 255, 255);
+    font-size: 1em;
+}
+
+#resultado p {
+  margin: 0!important;
+}
+
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+    margin-top: 15px;
+}
+
+.prereq-card {
+    text-align: center;
+    text-wrap: wrap;
+    font-size: 1.3em;
+    background-color: #6e3aff;
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    color: #ffffff;
+    vertical-align: baseline;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 #step_1_container {
     position: absolute;
     top: 50%;
