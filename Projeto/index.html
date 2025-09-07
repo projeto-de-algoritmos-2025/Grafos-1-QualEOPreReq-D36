@@ -31,7 +31,10 @@
                 <p>Descubra todos os pré-requisitos para uma disciplina do curso de Engenharia de Software da Universidade de Brasília (UnB).</p>
                 <p class="init_search_text">Digite o nome da disciplina e inicie a busca</p>
                 <div class="input-container">
-                    <input type="text" id="disciplina-input" placeholder="Cálculo 1">
+                    <div class = "input-with-suggestions">
+                        <input type="text" id="disciplina-input" placeholder="Cálculo 1">
+                        <div id="sugestoes" class="sugestoes"></div>
+                    </div>
                     <button id="search-button" onclick="mostrarPreReqs()">Buscar Pré-requisitos</button>
                 </div>
                 <div id="resultado"></div>     

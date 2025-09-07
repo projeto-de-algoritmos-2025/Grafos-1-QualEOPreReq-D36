@@ -129,7 +129,6 @@ const grafoEngenhariaSoftware = {
     "Cálculo 3": ["Cálculo 2"],
 };
 
-
 class CycleError extends Error {
   constructor(message) {
     super(message);
@@ -142,6 +141,11 @@ function normalizeString(str) {
     .normalize("NFD")          // separa os caracteres de acento
     .replace(/[\u0300-\u036f]/g, "") // remove os acentos
     .toUpperCase();            // converte para maiúsculas
+}
+
+const disciplinasNormalizadas = {};
+for (const key in grafoEngenhariaSoftware) {
+  disciplinasNormalizadas[normalizeString(key)] = key;
 }
 
 function preReq_chain(disciplinas, alvo) {
@@ -164,14 +168,6 @@ function preReq_chain(disciplinas, alvo) {
   dfs(alvo);
   return {prerequisites: ordem.reverse(), error: null};
 }
-
-// Cria mapa de chaves normalizadas -> chaves originais
-const disciplinasNormalizadas = {};
-for (const key in grafoEngenhariaSoftware) {
-  disciplinasNormalizadas[normalizeString(key)] = key;
-}
-
-// Função para interagir com o HTML
 
 function mostrarPreReqs() {
   const disciplinaInput = document.getElementById('disciplina-input');
@@ -217,4 +213,37 @@ function mostrarPreReqs() {
     }
   }
 }
+
+function mostrarSugestoes() {
+  const disciplinaInput = document.getElementById('disciplina-input');
+  const sugestoesDiv = document.getElementById('sugestoes');
+  const valorInput = normalizeString(disciplinaInput.value.trim());
+
+  sugestoesDiv.innerHTML = ''; 
+
+  if (valorInput.length < 2) {  // começa a sugerir após 2 caracteres
+    return;
+  }
+
+  const sugestoesFiltradas = Object.values(disciplinasNormalizadas)
+    .filter(disciplinaOriginal =>
+      normalizeString(disciplinaOriginal).includes(valorInput)
+    )
+    .slice(0, 5); // limita a 5 sugestões
+
+  if (sugestoesFiltradas.length > 0) {
+    sugestoesFiltradas.forEach(disciplina => {
+      const divSugestao = document.createElement('div');
+      divSugestao.textContent = disciplina;
+      divSugestao.onclick = () => {
+        disciplinaInput.value = disciplina;
+        sugestoesDiv.innerHTML = '';
+      };
+      sugestoesDiv.appendChild(divSugestao);
+    });
+  }
+}
+
+document.getElementById('disciplina-input').addEventListener('input', mostrarSugestoes);
+
 
