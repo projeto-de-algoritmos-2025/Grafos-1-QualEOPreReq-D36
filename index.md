@@ -19,16 +19,14 @@ Desenvolver um **sistema web** chamado **Qual é o Pre Req?** que auxilia estuda
 - **Representação do grafo**: Lista de adjacência — Implementada manualmente como um **objeto em JavaScript**, uma estrutura otimizada para a busca de vizinhos.
 - **Algoritmos de busca**:
   - **DFS (Depth-First Search)**: Para percorrer o grafo e encontrar todos os pré-requisitos necessários a partir de uma disciplina, seguindo o caminho até o final.
-  - **BFS (Breadth-First Search)**: Para sugerir uma ordem de estudo por camadas, mostrando primeiro as disciplinas mais próximas do início do curso.
 
 ---
 
 ## 🧩 Modelagem do Grafo
 
 ### 🟢 Nós (Vértices)
-Cada nó do grafo representa uma disciplina do curso, com os seguintes atributos:
+Cada nó do grafo representa uma disciplina do curso, com os seguinte atributo:
 - `nome`: Nome completo da disciplina (ex: "Cálculo II").
-- `codigo`: Identificador único da disciplina (ex: "MAT123").
 
 ### 🔗 Arestas
 As arestas direcionadas representam a relação de pré-requisito entre as disciplinas.
@@ -59,6 +57,6 @@ const graph = {
 
 -----
 
-## 🚀 Execução e Hospedagem
+## 🚀 Execução
 
 Para rodar o projeto localmente, basta abrir o arquivo `index.html` em qualquer navegador web.

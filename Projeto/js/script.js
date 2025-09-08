@@ -165,7 +165,9 @@ function preReq_chain(disciplinas, alvo) {
       }
     }
   }
+
   dfs(alvo);
+  
   return {prerequisites: ordem.reverse(), error: null};
 }
 
@@ -175,6 +177,7 @@ function mostrarPreReqs() {
   const disciplinaAlvo = normalizeString(disciplinaInput.value.trim());
 
   resultadoDiv.innerHTML = '';
+  resultadoDiv.classList.remove("hide");
 
   if (disciplinaAlvo === '') {
     resultadoDiv.innerHTML = '<p style="color: red;">Por favor, insira o nome de uma disciplina.</p>';
