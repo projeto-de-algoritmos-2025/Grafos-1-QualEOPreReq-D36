@@ -1,10 +1,12 @@
-# Smart Planner
+# Qual é o Pre Req?
 
 **Número da Lista**: 36
 **Conteúdo da Disciplina**: FGA0124 - PROJETO DE ALGORITMOS - T01  
 
+---
 
-## Alunos
+
+## 👩‍💻 Alunos
 
 
 <div align = "center">
@@ -21,123 +23,66 @@
 | 23/1012272  | Leticia Arisa Kobayashi Higa   |
 </div>
 
+---
 
-<!--
-## Sobre 
-O sistema de estacionamento simula a alocação de vagas de estacionamento para clientes em um shopping, com 18 vagas e 6 lojas, utilizando algoritmos de grafos. O objetivo é encontrar a vaga mais próxima de uma loja específica usando a busca em largura (BFS).
-
-## Screenshots
-
-<p align="center">
-  <img src="Documentos/screenshots/Print%201.png" alt="Print 1 do projeto" width="600"/>
-</p>
-
-<p align="center">
-  <img src="Documentos/screenshots/Print%202.png" alt="Print 2 do projeto" width="600"/>
-</p>
-
-<p align="center">
-  <img src="Documentos/screenshots/Print%203.png" alt="Print 3 do projeto" width="600"/>
-</p>
-
-<p align="center">
-  <img src="Documentos/screenshots/Print.png" alt="Print do projeto" width="600"/>
-</p>
-
-<p align="center">
-  <img src="Documentos/screenshots/Print%204.png" alt="Print 4 do projeto" width="600"/>
-</p>
-
-<p align="center">
-  <img src="Documentos/screenshots/Print%205.png" alt="Print 5 do projeto" width="600"/>
-</p>
-
-<p align="center">
-  <img src="Documentos/screenshots/Print%206.png" alt="Print 6 do projeto" width="600"/>
-</p>
-
-<p align="center">
-  <img src="Documentos/screenshots/Print%207.png" alt="Print 7 do projeto" width="600"/>
-</p>
-
-<p align="center">
-  <img src="Documentos/screenshots/Print%208.png" alt="Print 8 do projeto" width="600"/>
-</p>
-
-
-
-## Instalação 
-**Linguagem**: Python
-
-## Pré-requisitos
-Antes de rodar o projeto, você precisará ter os seguintes programas instalados:
-
-- **g++** (compilador C++).
-- **make** (ferramenta de automação de builds).
-- **Graphviz (dot)** para gerar e visualizar os grafos do caminho.
-
-### Instalar g++, make e dot
-
-#### No macOS:
-Se você usa macOS, pode instalar com o Homebrew:
-
-```bash
-brew install gcc make graphviz
-```
-
-#### No Linux (Ubuntu/Debian):
-No Linux, instale com:
-
-```bash
-sudo apt update
-sudo apt install build-essential graphviz
-```
-
-## Como compilar e executar o projeto
-### Passo 1: Clonar o repositório
-```bash
-git clone https://github.com/seu-usuario/Grafos-1-Parking-lot.git
-cd Grafos-1-Parking-lot
-```
-
-### Passo 2: Compilar o projeto
-Para compilar o projeto, use o comando make. Isso irá compilar todos os arquivos fonte e gerar o executável:
-
-```bash
-make
-```
-
-### Passo 3: Rodar o projeto
-Após a compilação, execute o programa gerado:
-
-```bash
-./Grafos-1-Parking-lot
-```
-
-## Uso 
-Após rodar o programa, escolha uma loja. O sistema encontrará a vaga mais próxima disponível usando o algoritmo BFS, e um grafo será gerado mostrando o caminho até essa vaga.
-
-O grafo será salvo como uma imagem `.png` no formato:
-
-```
-caminho_para_vaga_X.png
-```
-
-(onde `X` é o número da vaga).
-
-## Apresentação 
+## 🎬 Apresentação do Projeto
 
 <div align="center">
-<a href="https://youtu.be/PoJ3FK-J3wM?si=VLjQ5nK-w6U8Dh7-"><img src="https://i.imgur.com/nNBEJk2.png" width="50%"></a>
+<a href="https://youtu.be/UFUj0rDUyyU"><img src="https://i.imgur.com/2LNlNYO.png" width="50%"></a>
 </div>
 
-<font size="3"><p style="text-align: center">Autor: [Bianca Patrocínio](https://github.com/BiancaPatrocinio7) e [Letícia Torres](https://github.com/leticiatmartins).</p></font>
+<font size="3"><p style="text-align: center">Autor: [Danielle Soares](https://github.com/danielle-soaress) e [Leticia Arisa](https://github.com/Leticia-Arisa-K-Higa).</p></font>
 
+---
 
-## Outros 
-- O projeto usa a biblioteca Graphviz para gerar arquivos `.dot` e convertê-los em imagens PNG.
-- Se tiver problemas para visualizar as imagens, verifique se o `dot` está instalado corretamente.
-  
+## 🎯 Objetivo
 
+O **Qual é o Pre Req?** é um **sistema web** que ajuda estudantes do curso de Engenharia de Software da UnB (Campus FCTE) a planejar sua trajetória acadêmica.
 
--->
+Ele permite visualizar **pré-requisitos de disciplinas** de forma clara, utilizando **algoritmos de grafos**, para que o aluno possa se organizar melhor no semestre.
+
+---
+
+## 🔧 Tecnologias e Estruturas Utilizadas
+
+- **Linguagens**: **JavaScript** (para a lógica), **HTML** (para a estrutura) e **CSS** (para o estilo).
+- **Representação do grafo**: Lista de adjacência — Implementada manualmente como um **objeto em JavaScript**, uma estrutura otimizada para a busca de vizinhos.
+- **Algoritmos de busca**:
+  - **DFS (Depth-First Search)**: Para percorrer o grafo e encontrar todos os pré-requisitos necessários a partir de uma disciplina, seguindo o caminho até o final.
+
+---
+
+## 🧩 Modelagem do Grafo
+
+- **Nós (Vértices):** Cada disciplina é um nó com o atributo **nome** (ex: "Cálculo II").
+- **Arestas:** Conexões direcionadas que representam pré-requisitos.
+  - Exemplo:
+```javascript
+const graph = {
+    "Cálculo I": ["Cálculo II"],
+    "Cálculo II": ["Cálculo III"],
+    "Algoritmos": ["Estruturas de Dados"]
+};
+```
+
+-----
+
+## 🧠 Como funciona
+
+1. O usuário digita o nome de uma disciplina na interface.
+2. O sistema aplica **DFS** para descobrir todos os pré-requisitos da disciplina.
+3. O resultado é exibido na interface web, de forma clara para o estudante.
+
+---
+
+## 🚀 Como executar
+
+1. Clone o repositório.
+2. Abra o arquivo index.html em qualquer navegador.
+3. Explore as disciplinas e veja seus pré-requisitos instantaneamente.
+
+---
+
+## 💡 Observações
+
+- Sistema desenvolvido para o **curso de Engenharia de Software** da UnB-FCTE.
